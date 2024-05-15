@@ -2,6 +2,8 @@ package org.example;
 
 import org.openqa.selenium.By;
 
+import java.util.concurrent.TimeUnit;
+
 public class RegisterPage extends Utils {
 
     //to call test data in this method.
@@ -11,6 +13,9 @@ public class RegisterPage extends Utils {
 
     //enter registration details
     public void enterRegistrationDetails() {
+
+            //wait for safari driver
+        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
 
         typeIn(By.id("FirstName"), loadProp.getProperty("firstName"));
         typeIn(By.id("LastName"), loadProp.getProperty("lastName"));

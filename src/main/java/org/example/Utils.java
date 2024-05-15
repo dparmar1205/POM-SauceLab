@@ -1,6 +1,7 @@
 package org.example;
 
 import org.apache.commons.io.FileUtils;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -25,7 +26,6 @@ public class Utils extends BasePage {
     public static void typeIn(By by, String text) {
         driver.findElement(by).sendKeys(text);
     }
-
     public static String getText(By by) {
         return driver.findElement(by).getText();
     }

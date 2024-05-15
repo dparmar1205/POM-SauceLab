@@ -13,7 +13,7 @@ public class TestSuite extends BaseTest {
     BuildYourOwnSelection buildYourOwnSelection = new BuildYourOwnSelection();
 
     EmailAFriend emailAFriend = new EmailAFriend();
-    
+
     RegisterResultPage registerResultPage = new RegisterResultPage();
 
     ReferAFriendProducts referAFriend = new ReferAFriendProducts();
@@ -22,21 +22,22 @@ public class TestSuite extends BaseTest {
 
     @Test
     public void verifyUserShouldAbleToRegisterSuccessfully() {
+
         //click on register button
         homePage.clickOnRegisterButton();
 
         //enter registration details
         registerPage.enterRegistrationDetails();
-        //verify
-        registerResultPage.verifyUserRegisteredSuccessfully();
 
+        //verify
+        registerResultPage.verifyUserIsRegisteredSuccessfully();
 
     }
 
     @Test
     public void verifyRegisteredUserShouldLogin() {
 
-      //  registerPage.registrationForLogin();
+        //  registerPage.registrationForLogin();
         homePage.logInUser();
     }
 
@@ -55,9 +56,7 @@ public class TestSuite extends BaseTest {
         // selecting second option of the selected product to be added in cart
         buildYourOwnSelection.computerAdding();
         //verifying same product in shopping cart.
-         shoppingCartPage.verifyShoppingCartPage();
-
-
+        shoppingCartPage.verifyShoppingCartPage();
 
 
     }
