@@ -24,7 +24,7 @@ public class BrowserManager extends Utils {
     String browser = System.getProperty("browser");
     String sauceUrl = "https://oauth-darshanparmar1535-23692:de8f21a2-5ac1-4e43-af6c-3420cd34d1f3@ondemand.eu-central-1.saucelabs.com:443/wd/hub";
 
-    boolean cloud = true;
+    boolean cloud = Boolean.parseBoolean(System.getProperty("cloud"));
 
 
     public void openBrowser() {
@@ -86,21 +86,6 @@ public class BrowserManager extends Utils {
                 System.out.println("Your browser name is wrong:" + browser);
             }
         }
-
-
-//        if (browser.equalsIgnoreCase("Chrome")) {
-//            System.out.println("Your browser is Chrome");
-//            driver = new ChromeDriver();
-//        } else if (browser.equalsIgnoreCase("Firefox")) {
-//            System.out.println("Your browser is Firefox");
-//            driver = new FirefoxDriver();
-//        } else if (browser.equalsIgnoreCase("edge")) {
-//            System.out.println("Your browser is edge");
-//            driver = new EdgeDriver();
-//
-//        } else {
-//            System.out.println("Your browser name is wrong:" + browser);
-//        }
 
 
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
