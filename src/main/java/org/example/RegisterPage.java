@@ -25,6 +25,7 @@ public class RegisterPage extends Utils {
         typeIn(By.name("Password"), loadProp.getProperty("password"));
         typeIn(By.name("ConfirmPassword"), loadProp.getProperty("confirmPassword"));
         clickOnElement(By.id("register-button"));
+        
     }
     public void registrationForLogin(){
 

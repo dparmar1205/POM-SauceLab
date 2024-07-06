@@ -2,11 +2,11 @@ package org.example;
 
 import org.openqa.selenium.By;
 
-public class EmailAFriend extends Utils {
+public class EmailingFriend extends Utils {
 
-     LoadProp loadProp = new LoadProp();
+    LoadProp loadProp = new LoadProp();
 
-    //  to email a friend every now and then.
+    //to email a friend sometimes.
     public void referFriend() {   //created to use this method for other products
         //  clickOnElement(By.className("email-a-friend"));
         clickOnElement(By.xpath("//button[@class='button-2 email-a-friend-button']"));
@@ -14,4 +14,7 @@ public class EmailAFriend extends Utils {
         //  typeIn(By.id("YourEmailAddress"), loadProp.getProperty("emailForLogin"));
         clickOnElement(By.xpath("//button[@class='button-1 send-email-a-friend-button']"));
     }
+
 }
+
+

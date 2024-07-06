@@ -12,7 +12,7 @@ public class TestSuite extends BaseTest {
 
     BuildYourOwnSelection buildYourOwnSelection = new BuildYourOwnSelection();
 
-    EmailAFriend emailAFriend = new EmailAFriend();
+    EmailingFriend emailAFriend = new EmailingFriend();
 
     RegisterResultPage registerResultPage = new RegisterResultPage();
 
